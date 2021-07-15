@@ -1,0 +1,62 @@
+En linux no todos los usuarios pueden administrar los archivos de la misma manera
+por lo que existen permisos y niveles que ayudan a gestionarlos.
+
+Los archivos dentro de un directorio pueden ser manipulados dependiento el nivel
+Así puedes ser:
+
+Dueño o Propietario : Quien crea el achivo y cuenta con los derechos
+Grupo : Sirven para poder administrar una política de accesos a un archivp, está ingrado 
+por varios usuarios
+Otros o el resto: Los usuarios que no son ni propietarios ni pertenecen al grupo.
+
+Por otro lado los permisos indican de qué forma puede trabajr el usuario con un archivo dependiendo
+del nivel que tenga:
+
+Los permisos pueden ser:
+
+Lectura (r). Permite a un usuario visualizar o leer el contenido de un archivo
+
+Escritura (w). Permite a un usuario editar el contenido y los permisos de un archivo.
+
+Ejecución (x). Permite a un usuario la ejecuciòn del archivo
+
+De forma práctica se usan 3 digitos del 0 al 7 para indicar los permisos por niveles
+
+Leído de izquierda a derecha (Centenas a decenas) los niveles quedarìan:
+
+P = Propietario G = Grupo O= Otros o el resto
+
+PGO
+
+Para los permisos se usa el binario teniendo el cuenta que el encendido de cada Bit
+serà de acuerdo al siguiente orden:
+
+r w x
+
+Asì las combinaciones :
+
+Binario	Decimal	Permiso Descripción
+000	0	- - -	Ningún permiso
+001	1	- - x	Ejecución
+010	2	- w -	Escritura
+011	3	- w x	Escritura y ejecución
+100	4	r - -	Lectura
+101	5	r - x	Lectura y ejecución
+110	6	r w -	Lectura y escritura
+111	7	r w x	Lectura, escritura y ejecución
+
+
+Fuente: https://geekytheory.com/permisos-de-archivos-en-linux
+
+
+Los permisos para directorios muy similares a los permisos para archivos:
+
+Los permisos pueden ser:
+
+Lectura (r). Permite a un usuario visualizar o leer el contenido del directorio completo.
+
+Escritura (w). Permite a un usuario editar el contenido de directorio, es decir crear, eliminar archivos
+ y directorios dentro de este.
+
+Ejecución (x). Permite a un usuario entrar al directorio
+
